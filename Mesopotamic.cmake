@@ -14,4 +14,4 @@ add_library(MesoCMake INTERFACE)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/Functions)
 
 # Now we're going to add in all of the functions one by one 
-include(MesoSortProject)
+include(MesoSortProject)include(meso_shared_library)
