@@ -16,4 +16,4 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/Functions)
 # Now we're going to add in all of the functions one by one 
 include(meso_cmake_common)
 include(meso_shared_library)
-include(MesoSortProject)
+include(meso_sort_project)
