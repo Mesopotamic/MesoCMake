@@ -17,3 +17,11 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/Functions)
 include(meso_cmake_common)
 include(meso_shared_library)
 include(meso_sort_project)
+
+# Take the mesopotamic cmake define and set the library build type
+if(${MESO_BUILD_STATIC})
+	set(BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE)
+else()
+	set(BUILD_SHARED_LIBS ON CACHE INTERNAL "" FORCE)
+	set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
