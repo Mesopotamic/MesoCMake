@@ -29,8 +29,14 @@ function(meso_apply_target_settings TARGET_NAME)
 		# Tell Visual studio where it should be reading file paths from
 		# i.e setting the working directory to be the exe output directory
 		# we can do this with a generator expression
-		VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:${TARGET_NAME}>")
+		VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:${TARGET_NAME}>"
+
+		# Ensure the linker language is set so we don't have to add source 
+		# files in the top level cmake file for each target
+		LINKER_LANGUAGE "C")
 	# End of target properties
+
+
 
 endfunction()
 
