@@ -14,6 +14,12 @@ if(WIN32)
 	return()
 endif()
 
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+	set(meso_gfx_backend "glsl")
+	set(meso_window_backend "linux")
+	return()
+endif()
+
 if(${CMAKE_SYSTEM_NAME} STREQUAL "NintendoWii")
 	set(meso_gfx_backend "wii")
 	set(meso_window_backend "wii")
