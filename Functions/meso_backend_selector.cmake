@@ -20,6 +20,12 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
 	return()
 endif()
 
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Android")
+	set(meso_gfx_backend "glsl")
+	set(meso_window_backend "android")
+	return()
+endif()
+
 if(${CMAKE_SYSTEM_NAME} STREQUAL "NintendoWii")
 	set(meso_gfx_backend "wii")
 	set(meso_window_backend "wii")
