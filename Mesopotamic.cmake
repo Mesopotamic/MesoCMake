@@ -17,6 +17,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/Functions)
 include(meso_cmake_common)
 include(meso_shared_library)
 include(meso_sort_project)
+include(meso_compile_commands)
 
 # Take the mesopotamic cmake define and set the library build type
 if(${MESO_BUILD_STATIC})
